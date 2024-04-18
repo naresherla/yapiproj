@@ -19,15 +19,15 @@ from testapp import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     # path('api/',views.Employeeapiview.as_view()),
-    # path('apilist/',views.Employeelistapiview.as_view()),
+    path('apilist/',views.Employeelistapiview.as_view()),
     # path('apiserach/',views.Employeeserachview.as_view()),
-    # path('api/<int:pk>/',views.EmployeeRetriveApiview.as_view()),
+    path('api/<int:id>/',views.EmployeeRetriveApiview.as_view()),
     # path('api/<int:id>/',views.EmployeeRetriveApiview.as_view()),
-    # path('api/',views.EmployeeCreateApiview.as_view()),
-    # path('api/<int:id>/',views.EmployeeUpdateApiview.as_view()),
+    path('api/',views.EmployeeCreateApiview.as_view()),
+    path('apiupdate/<int:id>/',views.EmployeeUpdateApiview.as_view()),
     # path('api/<int:pk>/',views.EmployeeUpdateApiview.as_view()),  # if we use pk no need to write lookup_field in views
     # path('api/<int:pk>/',views.EmployeeDestroyApiview.as_view()),
-    path('api/',views.Employeelistcreateapiview.as_view()),
-    path('api/<int:pk>/',views. EmployeeRetriveupdatedestroyApiview.as_view())
+    # path('api/',views.Employeelistcreateapiview.as_view()),
+    # path('api/<int:pk>/',views. EmployeeRetriveupdatedestroyApiview.as_view())
 
 ]
